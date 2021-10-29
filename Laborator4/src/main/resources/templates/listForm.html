@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Contacts</title></head>
+
+<body>
+<fieldSet style="width:700px">
+    <legend>Contacts</legend>
+
+    <table style="width:100%" th:if="${not #lists.isEmpty(contacts)}">
+            <thead>
+                <th align="left" width="30%" nowrap>First name</th>
+                <th align="left" width="30%" nowrap>Last name</th>
+                <th align="left" width="30%" nowrap>Email</th>
+                <th></th>
+                <th></th>
+             </thead>
+             <tbody>
+                <tr th:each="contact : ${contacts}">
+                    <td th:text ="${contact.firstName}" nowrap></td>
+                    <td th:text ="${contact.lastName}" nowrap></td>
+                    <td th:text ="${contact.email}" nowrap></td>
+                    <td><a th:href="@{/edit/{id}(id=${contact.id})}">Edit</a></td>
+                    <td><a th:href="@{/remove/{id}(id=${contact.id})}">Remove</a></td>
+                </tr>
+             </tbody>
+     </table>
+     <p th:if="${#lists.isEmpty(contacts)}">No contacts found</p>
+    <p><input type="button" value="Add" style="width:100px" onclick="window.location='/edit/<new>'"></p>
+</fieldSet>
+</body>
+</html>
