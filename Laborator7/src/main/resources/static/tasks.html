@@ -1,0 +1,15 @@
+<div class="container">
+    {{#each groups}}
+        <div class ="column background{{@index}}" style ="width:32%">
+            <p class="column-title">{{@key}}</p>
+            <div>
+                {{#each this}}
+                    <div class="card  background{{@../index}}">
+                        <p> {{title}}</p>
+                     </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/each}}
+</div>
+

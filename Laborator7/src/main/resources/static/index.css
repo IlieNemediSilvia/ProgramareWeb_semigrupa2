@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: bisque;
+    color:#111;
+}
+.container {
+    padding: 1%;
+}
+.column {
+    margin-right: 1%;
+    padding: 10px;
+    border-radius: 15px;
+    width: 1%;
+    float:left;
+}
+.column.background0{
+    background-color: darkcyan;
+}
+.column.background1{
+    background-color: chocolate;
+}
+.column.background2{
+    background-color: darkgreen;
+}
+.column-title{
+    color:#fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+.card {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+.card.background0{
+    background-color: aquamarine;
+}
+.card.background1{
+    background-color: orange;
+}
+.card.background2{
+    background-color: darkseagreen;
+}
