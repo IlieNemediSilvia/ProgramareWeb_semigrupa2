@@ -1,6 +1,7 @@
 package demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class TaskService {
     @Autowired
+    @Qualifier("database")
     private TaskRepository repository;
 
     public List<TaskModel> getTasks(String title, String description, String assignedTo, TaskModel.TaskStatus status, TaskModel.TaskSeverity severity) {

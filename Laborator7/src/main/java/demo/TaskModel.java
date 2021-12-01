@@ -31,6 +31,15 @@ public class TaskModel implements BaseModel {
         id = UUID.randomUUID().toString();
     }
 
+    public TaskModel(String id, String title, String description, String assignedTo, TaskStatus status, TaskSeverity severity) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.assignedTo = assignedTo;
+        this.status = status;
+        this.severity = severity;
+    }
+
     public String getId() {
         return id;
     }

@@ -156,7 +156,7 @@ public class TaskController {
             @ApiResponse(responseCode = "404", description = "Task not found")
     })
     @PatchMapping("/{id}")
-    public ResponseEntity<Void> patchTask(@PathVariable String id, @Valid @RequestBody TaskModel task) throws IOException {
+    public ResponseEntity<Void> patchTask(@PathVariable String id, @RequestBody TaskModel task) throws IOException {
    //     try {
             if (service.patchTask(id, task)) {
                 return ResponseEntity.noContent().build();
