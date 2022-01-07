@@ -9,7 +9,15 @@ public class BankException extends RuntimeException {
         USER_HAS_NO_ACCOUNT_FOR_CURRENCY,
         ACCOUNT_HAS_NOT_ENOUGH_MONEY_FOR_PAYMENT,
         PAYMENT_COULD_NOT_BE_PROCESSED,
-        PAYMENT_COULD_NOT_BE_SAVED
+        PAYMENT_COULD_NOT_BE_SAVED,
+        USER_WITH_SAME_EMAIL_ALREADY_EXISTS,
+        USER_COULD_NOT_BE_SAVED,
+        USER_COULD_NOT_BE_REMOVED,
+        ACCOUNT_ALREADY_EXISTS,
+        ACCOUNT_COULD_NOT_BE_OPENED,
+        ACCOUNT_COULD_NOT_BE_SAVED,
+        ACCOUNT_COULD_NOT_BE_CLOSED,
+        ACCOUNT_IS_NOT_EMPTY
     }
 
     private ErrorCode error;
@@ -43,4 +51,12 @@ public class BankException extends RuntimeException {
     public static BankException paymentCouldNotBeSaved() {
         return new BankException(ErrorCode.PAYMENT_COULD_NOT_BE_SAVED);
     }
+    public static BankException userWithSameEmailAlreadyExists() { return new BankException(ErrorCode.USER_WITH_SAME_EMAIL_ALREADY_EXISTS);}
+    public static BankException userCouldNotBeSaved() { return new BankException(ErrorCode.USER_COULD_NOT_BE_SAVED);}
+    public static BankException userCouldNotBeRemoved() { return new BankException(ErrorCode.USER_COULD_NOT_BE_REMOVED);}
+    public static BankException accountAlreadyExists() { return new BankException(ErrorCode.ACCOUNT_ALREADY_EXISTS);}
+    public static BankException accountCouldNotBeOpened() { return new BankException(ErrorCode.ACCOUNT_COULD_NOT_BE_OPENED);}
+    public static BankException accountCouldNotBeSaved() { return new BankException(ErrorCode.ACCOUNT_COULD_NOT_BE_SAVED);}
+    public static BankException accountCouldNotBeClosed() { return new BankException(ErrorCode.ACCOUNT_COULD_NOT_BE_CLOSED);}
+    public static BankException accountIsNotEmpty() { return new BankException(ErrorCode.ACCOUNT_IS_NOT_EMPTY);}
 }

@@ -72,4 +72,5 @@ public class Account {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+
 }
